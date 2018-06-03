@@ -29,8 +29,6 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 
 <!-- Custom styles for this template -->
@@ -42,11 +40,12 @@
 	<div class="wrapper">
 
 		<!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%>
+		<%@include file="./shared/navbar.jsp" %>
 
 
 		<!-- Page Content -->
 		<div class="content">
+		
 			<!-- Loading the home content -->
 			<c:if test="${userClickHome == true}">
 				<%@include file="home.jsp"%>
@@ -59,11 +58,15 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-
+			
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+ 
 		</div>
 
 		<!-- Footer comes here -->
-		<%@include file="./shared/footer.jsp"%>
+		 <%@include file="./shared/footer.jsp"%>
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>

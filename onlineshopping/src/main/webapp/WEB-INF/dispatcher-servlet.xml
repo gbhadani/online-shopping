@@ -13,7 +13,9 @@
 
 	<context:component-scan
 		base-package="net.gbh.onlineshopping.controller"></context:component-scan>
-
+	<context:component-scan
+		base-package="net.gbh.shoppingbackend.daoimpl"></context:component-scan>
+		
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
